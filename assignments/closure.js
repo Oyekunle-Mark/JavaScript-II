@@ -20,9 +20,7 @@ const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.
   let count = 0;
 
-  return () => {
-    return ++count;
-  }
+  return () => ++count;
 };
 
 const newCounter = counter();

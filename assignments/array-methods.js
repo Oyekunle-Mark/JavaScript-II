@@ -57,7 +57,7 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 // The event director needs both the first and last names of each runner for their running bibs.  Combine both the first and last names into a new array called fullName. 
 const fullName = [];
 
-runners.forEach((runner) => {
+runners.forEach(runner => {
   fullName.push(`${runner.first_name} ${runner.last_name}`);
 });
 
@@ -65,13 +65,13 @@ console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
-const allCaps = runners.map((runner) => runner.first_name.toUpperCase());
+const allCaps = runners.map(runner => runner.first_name.toUpperCase());
 
 console.log(allCaps); 
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
-const largeShirts = runners.filter((runner) => runner.shirt_size === 'L');
+const largeShirts = runners.filter(runner => runner.shirt_size === 'L');
 console.table(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
@@ -84,15 +84,15 @@ console.log(ticketPriceTotal);
 
 // Problem 1
 // The email addresses of the runners needs to be aggregated for a bulk email service. The email will be stored in an array and logged to the console
-const runnersEmail = runners.map((runner) => runner.email);
+const runnersEmail = runners.map(runner => runner.email);
 console.log(runnersEmail);
 
 // Problem 2
 // The businesses that have put in a donation of or than $200 dollars need to be singled for post-race visitation. The organizers wishes to visit the businesses. Details of such businesses will be filtered and stored in an array and logged the console
-const largeDonations = runners.filter((runner) => runner.donation >= 200);
+const largeDonations = runners.filter(runner => runner.donation >= 200);
 console.table(largeDonations);
 
 // Problem 3
 // The event director needs a list of all the companies sending representative to the race.
-const companyName = runners.map((runner) => runner.company_name);
+const companyName = runners.map(runner => runner.company_name);
 console.log(companyName);
